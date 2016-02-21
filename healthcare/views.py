@@ -47,7 +47,17 @@ def diabetes_pregnancy(request):
 	f1 = open('static/data1/pima-indians-diabetes.data', 'a')		#Writes the test data to the file as a new training sample
 	f1.write(','.join([str(a) for a in test_data])+','+str(pred)+'\n')
 	f1.close()
-	json_data = {'Inputs given':inputs, 'Risk factor':risk}
+	if risk > 0.9:
+		advice = 'Oral medication is required.'
+	elif risk > 0.8:
+		advice = 'No sugar in diet.'
+	elif risk > 0.6:
+		advice = 'Undertake regular exercise and yoga.'
+	elif risk > 0.4:
+		advice = 'Reduce weight.'
+	else:
+		advice = 'Very low risk of acquiring diabetes.'
+	json_data = {'Inputs given':inputs, 'Risk factor':risk, 'A word of advice':advice}
 	return JsonResponse(json_data)
 
 
@@ -102,6 +112,7 @@ def diabetes_form(request):
 		url = '&'.join(l)
 		return redirect('/diabetes_pregnancy/?'+url)
 	return render(request, 'form1.html')
+
 
 def mortality_form(request):
 	if request.POST:
