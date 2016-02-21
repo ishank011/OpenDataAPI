@@ -1,0 +1,1 @@
+API to predict the risk factor of diabetes in pregnant women, as well as the chance of mortality in patients admitted to ICU.
