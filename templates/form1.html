@@ -1,0 +1,90 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'css/demo.css' %}">
+	<link rel="stylesheet" href="{% static 'css/form-basic.css' %}">
+</head>
+
+    <div class="main-content">
+
+        <!-- You only need this form and the form-basic.css -->
+
+        <form class="form-basic" method="post" action="{% url 'diabetes_form' %}">
+            {% csrf_token %}
+            <div class="form-title-row">
+                <h1>Diabetes Risk Prediction</h1>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Number of times pregnant</span>
+                    <input type="text" name="times_pregnant">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Plasma glucose concentration</span>
+                    <input type="text" name="glucose_tol">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Diastolic blood pressure (mm Hg)</span>
+                    <input type="text" name="diastolic_bp">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Triceps skin fold thickness (mm)</span>
+                    <input type="text" name="triceps">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>2-Hour serum insulin (mu U/ml)</span>
+                    <input type="text" name="insulin">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Body mass index (weight in kg/(height in m)^2)</span>
+                    <input type="text" name="mass_index">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Diabetes pedigree function</span>
+                    <input type="text" name="pedigree">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Age (years)</span>
+                    <input type="text" name="age">
+                </label>
+            </div>
+
+
+            <div class="form-row">
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

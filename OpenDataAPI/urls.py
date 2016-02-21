@@ -18,6 +18,8 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^diabetes_form/$','healthcare.views.diabetes_form',name='diabetes_form'),
+    url(r'^mortality_form/$','healthcare.views.mortality_form',name='mortality_form'),
     url(r'^diabetes_pregnancy/$','healthcare.views.diabetes_pregnancy',name='diabetes_pregnancy'),
     url(r'^mortality/$','healthcare.views.mortality',name='mortality'),
 ]
