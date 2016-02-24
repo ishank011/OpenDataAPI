@@ -16,7 +16,6 @@ The features used for prediction include:
   6. Body mass index (weight in kg/(height in m)^2)
   7. Diabetes pedigree function
   8. Age (years)
-  9. Class variable (0 or 1)
 
 For the ICU mortality prediction, publicly available data from the Xerox Research Innovation challenge 2015 has been used.
 The features are as follows:
