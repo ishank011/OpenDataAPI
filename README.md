@@ -1,11 +1,11 @@
-##OpenDataAPI
+## OpenDataAPI
 The risk of diabetes in women is significantly increased in case of multiple pregnancies. Early prediction of the same with the help of few measurable parameters can go a long way in taking steps to prevent and counter the disease.
 
 Also, patients admitted to ICUs, in certain cases, have an increased rate of unprecedented deaths.
 
 OpenDataAPI is written in Django to predict the risk factor of diabetes in pregnant women, as well as the chance of mortality in patients admitted to ICU. The API can prove to be of immense use in hospitals as well as private clinics. Pathology centers, which do not offer proper medical advice, can also draw a rough estimate of the conditions of patients using the prediction models.
 
-##Datasets
+## Datasets
 The dataset for the diabetes prediction model has been taken from Pima Indians Diabetes Database, National Institute of Diabetes and Digestive and Kidney Diseases (1990).
 The features used for prediction include:
   1. Number of times pregnant
@@ -29,7 +29,7 @@ The features are as follows:
 
 The features for the same have been extracted using /healthcare/feature_extraction.py
 
-###Usage
+### Usage
 The local server can be initialised on a machine running python with the command
 
     python manage.py runserver
